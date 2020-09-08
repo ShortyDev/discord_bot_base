@@ -12,7 +12,7 @@ To build a simple embedded message which auto-deletes after 20 seconds you can j
 ```
 This isn't enough to auto-delete a message tho. You can build the message and send it yourself (#1) or let the bot handle it for you (#2).
 
-This sends the message and in the channel and deletes it after the given amount.
+This sends the message in the channel and deletes it after the given amount.
 ###### #1
 ```java
                 Message message = textChannel.sendMessage(embedBuilder.buildMessage()).complete();
