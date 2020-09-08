@@ -71,11 +71,12 @@ public class EasyEmbed {
         return embedBuilder.build();
     }
 
-    public void buildMessageAndSend(TextChannel textChannel) {
+    public Message buildMessageAndSend(TextChannel textChannel) {
         Message message = textChannel.sendMessage(buildMessage()).complete();
         if (autoDelete != 0) {
             new DelayDelete(message, autoDelete);
         }
+        return message;
     }
 
     @Builder
