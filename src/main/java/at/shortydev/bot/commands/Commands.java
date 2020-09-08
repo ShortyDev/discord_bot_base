@@ -7,11 +7,12 @@ import net.dv8tion.jda.api.entities.TextChannel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @Getter
 public class Commands {
 
-    private final ArrayList<Command> commands;
+    private final List<Command> commands;
 
     public Commands(boolean registerCommands) {
         commands = new ArrayList<>();

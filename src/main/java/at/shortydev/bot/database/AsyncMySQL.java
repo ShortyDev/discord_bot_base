@@ -39,21 +39,19 @@ public class AsyncMySQL {
         executor.execute(() -> {
             ResultSet result = sql.query(statement);
 
-            new Thread(() -> {
-                consumer.accept(result);
-                try {
-                    statement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            consumer.accept(result);
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         });
     }
 
     public void query(String statement, Consumer<ResultSet> consumer) {
         executor.execute(() -> {
             ResultSet result = sql.query(statement);
-            new Thread(() -> consumer.accept(result)).start();
+            consumer.accept(result);
         });
     }
 
