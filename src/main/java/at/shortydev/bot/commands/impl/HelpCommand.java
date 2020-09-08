@@ -10,7 +10,6 @@ import java.awt.*;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
 
 public class HelpCommand extends Command {
 
@@ -21,11 +20,11 @@ public class HelpCommand extends Command {
     @Override
     public void onCommand(TextChannel textChannel, Member member, String command, String[] args) {
         if (args.length == 0) {
-            try {
-                HashMap<String, String> commands = new HashMap<>();
-                String prefix = DiscordBot.getDiscordBot().getServerDatabaseController().getServerSettings(textChannel.getGuild().getIdLong(), false).get().getPrefix();
+            HashMap<String, String> commands = new HashMap<>();
+            DiscordBot.getDiscordBot().getServerDatabaseController().getServerSettings(textChannel.getGuild().getIdLong(), false).thenAccept(serverSettings -> {
+
                 for (Command cmd : DiscordBot.getDiscordBot().getCommands().getCommands()) {
-                    commands.put(prefix + cmd.getName(), cmd.getDescription());
+                    commands.put(serverSettings.getPrefix() + cmd.getName(), cmd.getDescription());
                 }
                 StringBuilder commandList = new StringBuilder();
                 for (Map.Entry<String, String> entry : commands.entrySet()) {
@@ -34,9 +33,7 @@ public class HelpCommand extends Command {
                 EasyEmbed embedBuilder = EasyEmbed.builder().title("Help - Brance Bot").color(Color.GREEN).description(commandList.substring(1)).footer(EasyEmbed.Footer.builder().text(DiscordBot.getDiscordBot().getPublic_footer()).build())
                         .timestamp(new Date().toInstant()).autoDelete(20).build();
                 embedBuilder.buildMessageAndSend(textChannel);
-            } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
-            }
+            });
         }
     }
 }

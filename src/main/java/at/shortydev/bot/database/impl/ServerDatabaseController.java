@@ -16,7 +16,7 @@ public class ServerDatabaseController {
 
     private final HashMap<Long, ServerSettings> settingsCache = new HashMap<>();
 
-    public Future<ServerSettings> getServerSettings(long serverId, boolean reload) {
+    public CompletableFuture<ServerSettings> getServerSettings(long serverId, boolean reload) {
         CompletableFuture<ServerSettings> completableFuture = new CompletableFuture<>();
 
         if (!settingsCache.containsKey(serverId) || reload) {
