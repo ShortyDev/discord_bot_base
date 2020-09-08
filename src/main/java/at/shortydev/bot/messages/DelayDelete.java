@@ -1,4 +1,4 @@
-package at.shortydev.brance.messages;
+package at.shortydev.bot.messages;
 
 import net.dv8tion.jda.api.entities.Message;
 

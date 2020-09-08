@@ -1,6 +1,6 @@
-package at.shortydev.brance.commands;
+package at.shortydev.bot.commands;
 
-import at.shortydev.brance.commands.impl.HelpCommand;
+import at.shortydev.bot.commands.impl.HelpCommand;
 import lombok.Getter;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;

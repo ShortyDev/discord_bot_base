@@ -1,11 +1,11 @@
-package at.shortydev.brance;
+package at.shortydev.bot;
 
-import at.shortydev.brance.commands.Commands;
-import at.shortydev.brance.database.AsyncMySQL;
-import at.shortydev.brance.database.impl.ServerDatabaseController;
-import at.shortydev.brance.listeners.GuildJoinEvent;
-import at.shortydev.brance.listeners.GuildLeaveEvent;
-import at.shortydev.brance.listeners.TextMessageEvent;
+import at.shortydev.bot.commands.Commands;
+import at.shortydev.bot.database.AsyncMySQL;
+import at.shortydev.bot.database.impl.ServerDatabaseController;
+import at.shortydev.bot.listeners.GuildJoinEvent;
+import at.shortydev.bot.listeners.GuildLeaveEvent;
+import at.shortydev.bot.listeners.TextMessageEvent;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import net.dv8tion.jda.api.OnlineStatus;

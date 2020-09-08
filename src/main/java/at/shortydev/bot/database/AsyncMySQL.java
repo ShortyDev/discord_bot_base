@@ -1,4 +1,4 @@
-package at.shortydev.brance.database;
+package at.shortydev.bot.database;
 
 import lombok.Builder;
 

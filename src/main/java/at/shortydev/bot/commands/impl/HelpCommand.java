@@ -1,8 +1,8 @@
-package at.shortydev.brance.commands.impl;
+package at.shortydev.bot.commands.impl;
 
-import at.shortydev.brance.DiscordBot;
-import at.shortydev.brance.commands.Command;
-import at.shortydev.brance.messages.EasyEmbed;
+import at.shortydev.bot.DiscordBot;
+import at.shortydev.bot.commands.Command;
+import at.shortydev.bot.messages.EasyEmbed;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 

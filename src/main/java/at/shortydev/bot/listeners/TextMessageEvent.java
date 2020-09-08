@@ -1,7 +1,7 @@
-package at.shortydev.brance.listeners;
+package at.shortydev.bot.listeners;
 
-import at.shortydev.brance.DiscordBot;
-import at.shortydev.brance.settings.ServerSettings;
+import at.shortydev.bot.DiscordBot;
+import at.shortydev.bot.settings.ServerSettings;
 import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;

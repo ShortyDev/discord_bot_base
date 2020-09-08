@@ -1,6 +1,6 @@
-package at.shortydev.brance.shutdown;
+package at.shortydev.bot.shutdown;
 
-import at.shortydev.brance.DiscordBot;
+import at.shortydev.bot.DiscordBot;
 
 public class ShutdownHook extends Thread {
 

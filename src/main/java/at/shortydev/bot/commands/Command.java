@@ -1,4 +1,4 @@
-package at.shortydev.brance.commands;
+package at.shortydev.bot.commands;
 
 import lombok.Getter;
 import net.dv8tion.jda.api.entities.Member;

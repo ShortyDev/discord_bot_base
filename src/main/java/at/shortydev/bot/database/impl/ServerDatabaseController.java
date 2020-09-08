@@ -1,7 +1,7 @@
-package at.shortydev.brance.database.impl;
+package at.shortydev.bot.database.impl;
 
-import at.shortydev.brance.DiscordBot;
-import at.shortydev.brance.settings.ServerSettings;
+import at.shortydev.bot.DiscordBot;
+import at.shortydev.bot.settings.ServerSettings;
 import lombok.Getter;
 
 import javax.annotation.Nullable;

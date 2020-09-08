@@ -30,7 +30,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>at.shortydev.brance.BotBootstrap</mainClass>
+                                    <mainClass>at.shortydev.bot.BotBootstrap</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

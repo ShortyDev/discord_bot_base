@@ -1,4 +1,4 @@
-package at.shortydev.brance.settings;
+package at.shortydev.bot.settings;
 
 import lombok.Builder;
 import lombok.Getter;

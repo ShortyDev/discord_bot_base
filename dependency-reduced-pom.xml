@@ -25,7 +25,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>at.shortydev.brance.BotBootstrap</mainClass>
+                  <mainClass>at.shortydev.bot.BotBootstrap</mainClass>
                 </transformer>
               </transformers>
             </configuration>

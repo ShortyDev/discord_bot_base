@@ -1,6 +1,6 @@
-package at.shortydev.brance;
+package at.shortydev.bot;
 
-import at.shortydev.brance.shutdown.ShutdownHook;
+import at.shortydev.bot.shutdown.ShutdownHook;
 
 public class BotBootstrap {
 
