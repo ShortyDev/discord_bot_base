@@ -37,7 +37,7 @@ public class EasyReaction {
         private final Type type;
 
         public enum Type {
-            ADD, REMOVE;
+            ADD, REMOVE
         }
     }
 }
