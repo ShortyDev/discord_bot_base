@@ -10,9 +10,9 @@ public class ShutdownHook extends Thread {
         DiscordBot.getDiscordBot().getServerDatabaseController().getSettingsCache().forEach((id, serverSettings) -> DiscordBot.getDiscordBot().getServerDatabaseController().updateServerSettings(serverSettings, false));
         System.out.println("Shutting down JDA shard manager...");
         DiscordBot.getDiscordBot().getShardManager().shutdown();
-        System.out.println("Waiting 4 seconds...");
+        System.out.println("Waiting 2 seconds...");
         try {
-            Thread.sleep(4000L);
+            Thread.sleep(2000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
