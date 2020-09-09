@@ -5,6 +5,7 @@ import at.shortydev.bot.database.AsyncMySQL;
 import at.shortydev.bot.database.impl.ServerDatabaseController;
 import at.shortydev.bot.listeners.GuildJoinEvent;
 import at.shortydev.bot.listeners.GuildLeaveEvent;
+import at.shortydev.bot.listeners.MessageReactEvent;
 import at.shortydev.bot.listeners.TextMessageEvent;
 import lombok.Getter;
 import lombok.SneakyThrows;
@@ -51,6 +52,7 @@ public class DiscordBot {
         builder.addEventListeners(new TextMessageEvent());
         builder.addEventListeners(new GuildJoinEvent());
         builder.addEventListeners(new GuildLeaveEvent());
+        builder.addEventListeners(new MessageReactEvent());
         shardManager = builder.build();
         shardManager.setActivity(Activity.of(Activity.ActivityType.DEFAULT, "Bot Status"));
         shardManager.setStatus(OnlineStatus.DO_NOT_DISTURB);
