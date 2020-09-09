@@ -6,7 +6,7 @@
 
     <groupId>at.shortydev</groupId>
     <artifactId>brance</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <build>
         <plugins>
             <plugin>
