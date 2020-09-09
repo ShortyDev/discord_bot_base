@@ -24,3 +24,17 @@ This does exactly the same as #1 but its easier and won't delete if you enter 0 
 ```java
                 embedBuilder.buildMessageAndSend(textChannel);
 ```                
+
+# Create a reaction listener with EasyReaction
+To create a reaction listener you need to have a message, the emote and space for a consumer.
+```java
+                EasyReaction.builder()
+                        .message(message)
+                        .emote(textChannel.getGuild().getEmoteById("testId"))
+                        .reactEvent(reaction -> textChannel.sendMessage("User " + reaction.getUserId() + " interacted with " +
+                                "the reaction button! (" + reaction.getType() + " )").queue())
+                        .build()
+                        .registerReaction();
+```
+This will trigger the consumer every time someone (un-)reacts to the message with the emote provided.
+The user id can be gotten with `Reaction#getUserId()` and the action performed by the user (ADD, REMOVE) with `Reaction#getType()`.
