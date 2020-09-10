@@ -38,3 +38,22 @@ To create a reaction listener you need to have a message, the emote and space fo
 ```
 This will trigger the consumer every time someone (un-)reacts to the message with the emote provided.
 The user id can be gotten with `Reaction#getUserId()` and the action performed by the user (ADD, REMOVE) with `Reaction#getType()`.
+
+# Create a simple command
+To create a command, you have to let the class for your command extend the bots Command class.
+```java
+import at.shortydev.bot.commands.Command;
+
+public class HelpCommand extends Command {
+```
+Create the constructor
+```java
+    public HelpCommand(String name, String description, String... aliases) {
+        super(name, description, aliases);
+    }
+```
+Last but not least, create the method thats called on execution
+```java
+    @Override
+    public void onCommand(TextChannel textChannel, Member member, String command, String[] args) {
+```
