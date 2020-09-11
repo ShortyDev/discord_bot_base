@@ -12,7 +12,7 @@ public class TextMessageEvent extends ListenerAdapter {
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
         if (event.getAuthor().getId().equals(event.getGuild().getJDA().getSelfUser().getId())) return;
         if (!event.getChannelType().equals(ChannelType.TEXT)) return;
-        DiscordBot.getDiscordBot().getServerDatabaseController().getServerSettings(event.getGuild().getIdLong(), true).thenAccept(serverSettings -> {
+        DiscordBot.getDiscordBot().getServerDatabaseController().getServerSettings(event.getGuild().getIdLong(), false).thenAccept(serverSettings -> {
             if (serverSettings == null) {
                 return;
             }
