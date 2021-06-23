@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>at.shortydev</groupId>
-    <artifactId>brance</artifactId>
+    <artifactId>discord-bot-base</artifactId>
     <version>1.0.5-SNAPSHOT</version>
     <build>
         <plugins>
@@ -57,7 +57,7 @@
         <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
-            <version>4.2.0_168</version>
+            <version>LATEST</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
